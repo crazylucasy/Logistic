@@ -3,11 +3,13 @@
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Spinner, useAuth } from "@/component";
+import { useDispatch } from "@/features/store";
 import { validateToken } from "@/utils/utility";
 import { logout } from "@/features/projects";
 
 export default function MainPage() {
   const router = useRouter();
+  const dispatch = useDispatch();
   const query = useSearchParams();
   const isAuth = query.get("auth");
   // const { expireDate, accessToken } = useAuth();
@@ -21,7 +23,7 @@ export default function MainPage() {
     //   expireDate &&
     //   validateToken(expireDate)
     // ) {
-      router.replace("/home");
+      router.replace("/merchant");
     // } else {
     //   dispatch(logout());
     // }

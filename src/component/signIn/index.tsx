@@ -12,7 +12,7 @@ import { Router } from "next/router";
 
 export default function SignIn() {
   const router = useRouter();
-  // const [setRequestLogin, { isLoading }] = useSetRequestLoginMutation();
+  const [setRequestLogin, { isLoading }] = useSetRequestLoginMutation();
   const [form] = Form.useForm();
 
   const onSubmit = async (data: SignInProps) => {
@@ -27,14 +27,14 @@ export default function SignIn() {
     // const res = await setRequestLogin(submitData);
     //@ts-ignore
     // if (res.data && res.data.code === 200) {
-    router.replace("/home");
+      router.replace("/merchant");
     // }
   };
   return (
     <div className="grid py-48 justify-center">
       <div className="w-[500px] grid gap-y-6">
         <div className="flex justify-center">
-          {/* <IconDone /> */}
+          <IconDone />
           <p className="text-3xl px-4 font-medium">DoneRight</p>
         </div>
         <Form form={form} layout="vertical" onFinish={onSubmit}>
@@ -65,7 +65,7 @@ export default function SignIn() {
             size="large"
             className="!w-full !bg-[#171F30] !text-white !h-11"
             htmlType="submit"
-          // loading={isLoading}
+            loading={isLoading}
           >
             Sign In
           </Button>

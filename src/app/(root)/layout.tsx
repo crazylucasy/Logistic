@@ -1,9 +1,13 @@
 "use client";
 
-import { Menu } from "antd";
+import { Menu, Button } from "antd";
+import { LogoutOutlined } from "@ant-design/icons";
 
-import menuItems from "@/menu-items/main";
-import menuItemsSetting from "@/menu-items/setting"
+import IconExpand from "@/assets/expand.svg";
+import IconClose from "@/assets/close.svg";
+import IconDone from "@/assets/done.svg";
+import menuItems from "@/menu-items";
+
 import React, { useState, useEffect } from "react";
 import {
   redirect,
@@ -13,9 +17,14 @@ import {
 } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
 
+import { Spinner, useAuth } from "@/component";
+import { useDispatch } from "@/features/store";
+import { validateToken } from "@/utils/utility";
+import { logout } from "@/features/projects";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
+  const dispatch = useDispatch();
   const query = useSearchParams();
   // const isAuth = query.get("auth");
   // const { expireDate, accessToken } = useAuth();
@@ -28,6 +37,26 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setCollapsed(!collapsed);
   };
 
+  // useEffect(() => {
+  //   if (isAuth) {
+  //     dispatch(logout());
+  //   } else if (
+  //     accessToken &&
+  //     accessToken !== "" &&
+  //     expireDate &&
+  //     validateToken(expireDate)
+  //   ) {
+  //     if (pathname === "/") {
+  //       redirect("/merchant");
+  //     }
+  //   } else {
+  //     dispatch(logout());
+  //   }
+  // }, [router]);
+
+  const handleClick = () => {
+    dispatch(logout());
+  };
   useEffect(() => {
     if (isMobile) {
       setCollapsed(true);
@@ -38,86 +67,52 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div>
+      {/* <Spinner loading={true} size="large" />; */}
       <div className="grid-cols flex min-h-screen">
         <div
-          className={`bg-[#060C2C] text-white py-8 flex flex-col ${collapsed ? "!w-[64px]" : "!w-[266px]"
-            }`}
+          className={`bg-[#171F30] text-white py-6 flex flex-col ${
+            collapsed ? "!w-[120px]" : "!w-[270px]"
+          }`}
         >
-          <div className="flex items-center py-0 mb-[14px] !h-18">
+          <div className="flex items-center py-4 px-10 mb-[14px] !h-18">
+            <IconDone />
             {!collapsed && (
-              <div className="bg-[#181D3B] flex w-[95%] rounded-r-3xl px-[15px] py-4 gap-2">
-                <div className="rounded-full bg-[#E6E1E5]">
-                  <p className="text-2xl px-4 py-2 text-black">R</p>
-                </div>
-                <div>
-                  <p>Welcome back</p>
-                  <div className="flex gap-2 items-center">
-                    <p className="text-base">Rex</p>
-                    <p className="text-lg font-semibold">ID: RAC45678</p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {collapsed && (
-              <div>
-                <style jsx global>
-                  {`
-                  .ant-menu-item {
-                    width: 56px !important;
-                  }
-                  `}
-                </style>
-                <div className="bg-[#181D3B] flex w-[60px] rounded-r-3xl px-[5px] py-5">
-                  <div className="rounded-full bg-[#E6E1E5]">
-                    <p className="text-2xl px-4 py-2 text-black">R</p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-2xl font-semibold px-[14px] py-2">DoneRight</p>
             )}
           </div>
 
-          <div className="flex">
+          <div className="pl-[13px] flex">
             <Menu
               theme={"dark"}
               defaultSelectedKeys={[pathname.slice(1)]}
               mode="inline"
               inlineCollapsed={collapsed}
               items={menuItems}
-              className="!bg-[#060C2C] !text-[#939396]"
+              className="!bg-[#171F30] !text-[#939396]"
             />
-            {/* <Button
+            <Button
               type="link"
               onClick={toggleCollapsed}
-              className="!mx-[-18px] !px-0 !mt-2"
+              className="!ml-[-4px] !mt-1"
             >
               {collapsed ? <IconClose /> : <IconExpand />}
-            </Button> */}
+            </Button>
           </div>
-          <div className="pb-10 mt-auto">
-            {collapsed && (
-              <div>
-                <style jsx global>
-                  {`
-                  .ant-menu {
-                    width: 56px !important;
-                  }
-                  `}
-                </style>
-              </div>
-            )}
-            <div className="h-[2px] bg-[#939396] mx-4"></div>
-            <Menu
-              theme={"dark"}
-              mode="inline"
-              inlineCollapsed={collapsed}
-              items={menuItemsSetting}
-              className="!bg-[#060C2C] !text-[#939396] !mt-4"
-            />
+          <div className="mt-auto pb-0 px-8">
+            <Button
+              type="link"
+              className="!flex items-center !text-white"
+              onClick={handleClick}
+            >
+              <LogoutOutlined className="text-lg" />{" "}
+              {!collapsed && <p className="text-base py-2">Signout</p>}
+            </Button>
           </div>
         </div>
         <div
-          className={`bg-[#F4EFF4] ${collapsed ? "w-[calc(100vmax-3.5rem)]" : "w-[calc(100vmax-16.65rem)]"
-            }`}
+          className={` ${
+            collapsed ? "w-[calc(100%-7.5rem)]" : "w-[calc(100%-17rem)]"
+          }`}
         >
           {children}
         </div>

@@ -6,7 +6,10 @@ const nextConfig = {
       use: ["@svgr/webpack"],
     });
     return config;
-  }
+  },
+  env: {
+    DONE_RIGHT_BACKEND_URL: process.env.DONE_RIGHT_BACKEND_URL,
+  },
 };
 
 module.exports = nextConfig;

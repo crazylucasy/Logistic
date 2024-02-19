@@ -31,7 +31,7 @@ export const auth = createSlice({
     logout: () => {
       typeof window !== "undefined" && window.sessionStorage.clear();
       typeof window !== "undefined" && window.localStorage.clear();
-      typeof window !== "undefined" && window.location.replace("/home");
+      typeof window !== "undefined" && window.location.replace("/signin");
     },
   },
   // extraReducers: (builder: ActionReducerMapBuilder<AuthInitialProps>) => {
