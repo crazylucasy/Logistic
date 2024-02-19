@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Description
+ This project is one for converting the Figma Design to Website - called ***Logistic***.
+ In this project, I used the T3 stacks - Next.js, TailwindCSS, TypeScript, and Ant Design.
+
+
+#  Some screenshots for project
+
+Here are some screenshots for project.
+![Screenshot 1](https://github.com/crazylucasy/Logistic/blob/main/UI%20prefaces/1.png)
+![Screenshot 2](https://github.com/crazylucasy/Logistic/blob/main/UI%20prefaces/2.png)
+
 
 ## Getting Started
 
