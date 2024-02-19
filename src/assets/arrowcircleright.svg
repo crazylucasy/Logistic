@@ -1,0 +1,46 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="#1E1E1E"/>
+<g id="ADMIN/ORDERS, SHIPMENTS &#38; SHOP FOR ME">
+<path d="M-8290 -24613C-8290 -24614.1 -8289.1 -24615 -8288 -24615H60700C60701.1 -24615 60702 -24614.1 60702 -24613V35482C60702 35483.1 60701.1 35484 60700 35484H-8288C-8289.11 35484 -8290 35483.1 -8290 35482V-24613Z" fill="#AAAAAA"/>
+<path d="M-8288 -24614H60700V-24616H-8288V-24614ZM60701 -24613V35482H60703V-24613H60701ZM60700 35483H-8288V35485H60700V35483ZM-8289 35482V-24613H-8291V35482H-8289ZM-8288 35483C-8288.55 35483 -8289 35482.6 -8289 35482H-8291C-8291 35483.7 -8289.66 35485 -8288 35485V35483ZM60701 35482C60701 35482.6 60700.6 35483 60700 35483V35485C60701.7 35485 60703 35483.7 60703 35482H60701ZM60700 -24614C60700.6 -24614 60701 -24613.6 60701 -24613H60703C60703 -24614.7 60701.7 -24616 60700 -24616V-24614ZM-8288 -24616C-8289.66 -24616 -8291 -24614.7 -8291 -24613H-8289C-8289 -24613.6 -8288.55 -24614 -8288 -24614V-24616Z" fill="black" fill-opacity="0.1"/>
+<g id="CLIENT SIDE/CONFIRMING NEW ORDER/WEB">
+<path d="M-1867 -2540C-1867 -2541.1 -1866.1 -2542 -1865 -2542H29751C29752.1 -2542 29753 -2541.1 29753 -2540V11503C29753 11504.1 29752.1 11505 29751 11505H-1865C-1866.1 11505 -1867 11504.1 -1867 11503V-2540Z" fill="#E5E5E5"/>
+<path d="M-1865 -2541H29751V-2543H-1865V-2541ZM29752 -2540V11503H29754V-2540H29752ZM29751 11504H-1865V11506H29751V11504ZM-1866 11503V-2540H-1868V11503H-1866ZM-1865 11504C-1865.55 11504 -1866 11503.6 -1866 11503H-1868C-1868 11504.7 -1866.66 11506 -1865 11506V11504ZM29752 11503C29752 11503.6 29751.6 11504 29751 11504V11506C29752.7 11506 29754 11504.7 29754 11503H29752ZM29751 -2541C29751.6 -2541 29752 -2540.55 29752 -2540H29754C29754 -2541.66 29752.7 -2543 29751 -2543V-2541ZM-1865 -2543C-1866.66 -2543 -1868 -2541.66 -1868 -2540H-1866C-1866 -2540.55 -1865.55 -2541 -1865 -2541V-2543Z" fill="black" fill-opacity="0.1"/>
+<g id="export Order Request" filter="url(#filter0_dd_0_1)">
+<rect x="-30" y="-242" width="1000" height="2272" rx="20" fill="white"/>
+<g id="Frame 410">
+<g id="ORDER INFRMATION">
+<g id="Card Fields Title">
+<g id="Frame 22">
+<g id="vuesax/bold/arrow-circle-right">
+<g id="vuesax/bold/arrow-circle-right_2">
+<g id="arrow-circle-right">
+<path id="Vector" d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM14.79 12.53L11.26 16.06C11.11 16.21 10.92 16.28 10.73 16.28C10.54 16.28 10.35 16.21 10.2 16.06C9.91 15.77 9.91 15.29 10.2 15L13.2 12L10.2 9C9.91 8.71 9.91 8.23 10.2 7.94C10.49 7.65 10.97 7.65 11.26 7.94L14.79 11.47C15.09 11.76 15.09 12.24 14.79 12.53Z" fill="#1D192B"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_dd_0_1" x="-41" y="-249" width="1022" height="2294" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="3" operator="dilate" in="SourceAlpha" result="effect2_dropShadow_0_1"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="4"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_0_1" result="effect2_dropShadow_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_0_1" result="shape"/>
+</filter>
+</defs>
+</svg>
